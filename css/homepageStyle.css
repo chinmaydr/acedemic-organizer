@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(173, 218, 179);
+    font-family: Arial;
+    font-size: 36px;
+}
+
+img.homepage-logo {
+    width: 100px;
+    
+}
+
+h1.text {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    text-overflow: ellipsis;
+}
+
+button {
+    position: fixed;
+    left: 46.5%;
+    border: none;
+    border-radius: 10px;
+    background-color:rgb(166, 255, 125);
+    padding: 15px 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 30px;
+    font-family: Arial;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: white;
+}

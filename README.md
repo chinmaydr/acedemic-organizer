@@ -1,2 +1,2 @@
-# acedemic-organizer
+# academic-organizer
 the dream team scrum project
