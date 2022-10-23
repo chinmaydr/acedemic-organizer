@@ -4,16 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- You see this <title> on the tab name -->
     <title>Kernel</title>
-    <link rel="icon" href="/images/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <!-- Importing styles from this css file -->
     <link rel="stylesheet" href="css/homepageStyle.css">
   </head>
+  <!-- Page display starts here -->
   <body>
     <img src="images/favicon.png" alt="Kernel Logo" class="homepage-logo">
     <h1 class="text">Kernel</h1>
-    <div class="w3-container w3-teal">
-      <button type="button" class="button">Sign In</button>
-    </div>
-    
+    <p class="homedesc">An academic organizer for your educational needs.</p>
+    <p class="homedesc">Comes complete with the ability to add notes, add summaries from <a href="https://en.wikipedia.org/wiki/Main_Page" target="_blank">Wikipedia</a>, and generate flashcards.</p>
+    <p class="homedesc">All. For. Free.</p>
+    <!-- "Log In" button redirects to the Log In page -->
+    <button type="button" class="login" onclick="window.location.href='http://127.0.0.1:5500/acedemic-organizer/Templates/login.html';" id="btn">Sign In</button>
+    <!-- "Credits" button redirects to a credits/contributions page (unfinished) -->
+    <button type="button" class="credits" onclick="window.location.href='http://127.0.0.1:5500/acedemic-organizer/Templates/credits.html';" id="crdtsbtn">Credits</button>
   </body>
 </html>
