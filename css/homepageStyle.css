@@ -44,8 +44,12 @@ button:hover {
 button.credits {
     position: fixed;
     margin-top: 100px;
-    width: 10%;
-    left: 45%;
     font-size: 35px;
+}
 
+button.back {
+    width: 20%;
+    left: 40%;
+    padding: 10px 15px;
+    font-size: 30px;
 }

@@ -33,6 +33,7 @@ input {
     border-radius: 5px;
     background-color: rgb(173, 218, 179);
     transition-duration: 0.4s;
+    text-align: left;
 }
 /* This changes formatting when the input box is clicked */
 input:focus {
@@ -54,7 +55,7 @@ button {
     border: none;
     border-radius: 10px;
     background-color:rgb(192, 253, 163);
-    padding: 0px 0px;
+    padding: 20px 15px;
     text-align: center;
     display: inline-block;
     font-size: 20px;
@@ -77,7 +78,7 @@ button.login {
     padding: 30px 15px;
     text-align: center;
     display: inline-block;
-    font-size: 35px;
+    font-size: 30px;
     font-family: Arial;
     margin: 4px 2px;
     cursor: pointer;
@@ -85,4 +86,23 @@ button.login {
 }
 button.login:hover {
     background-color: white;
+}
+/* Show/hide button */
+input.vis {
+    position: absolute;
+    left: 950px;
+    top: 413px;
+    padding: 16px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    width: 4%;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(173, 218, 179);
+    transition-duration: 0.4s;
+}
+input.vis:focus {
+    background-color: none;
+    border: none;
+    border-bottom: none;
 }
