@@ -89,7 +89,7 @@ button.login:hover {
 }
 /* Show/hide button */
 input.vis {
-    position: fixed;
+    position: absolute;
     left: 950px;
     top: 413px;
     padding: 16px 10px;

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="../css/dashboardStyle.css">
+    <title>Kernel Dashboard</title>
+</head>
+<body>
+    <script src="../js/addSubject.js"></script>
+    <div>
+        <img src="../images/favicon.png" alt="Kernel Logo" class="homepage-logo">
+        <h1 class="text">Dashboard</h1>
+    </div>
+
+    <input type="image" src="../images/plus.png" class="addbutton" onclick="addForm()">
+
+    <div class="form-popup" id="subjectPopup">
+        <form class="form-container">
+            <h1 id="subjectadd">Add a Subject</h1>
+
+            <input type="text" placeholder="Subject name" name="subject" required id="entersubject">
+            
+            <br>
+            
+            <button type="submit" id="submitBtn" class="subjectbtn">Done</button>
+            <br>
+            <button type="button" class="subjectbtn" onclick="cancelForm()">Cancel</button>
+        </form>
+    </div>
+        
+
+</body>
+</html>

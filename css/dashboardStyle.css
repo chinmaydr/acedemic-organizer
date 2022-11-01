@@ -1,0 +1,92 @@
+body {
+    background-color: rgb(173, 218, 179);
+    font-family: Helvetica;
+    font-size: 25px;
+    text-align: center;
+}
+
+img.homepage-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 150px;
+}
+
+h1.text {
+    font-size: 80px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* align form container */
+#subjectPopup {
+    margin: auto;
+    width: 20%;
+    left: 40%;
+}
+
+/* Format plus sign to add subject */
+input.addbutton {
+    width: 70px;
+}
+
+
+/* header in form */
+#subjectadd {
+    font-size: 20pt;
+}
+
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: absolute;
+    text-align: center;
+    border: none;
+    z-index: 9;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: rgb(195, 219, 199);
+  }
+
+
+  #entersubject {
+    padding: 16px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid rgb(0, 163, 136);
+    border-radius: 5px;
+    background-color: rgb(198, 226, 202);
+    transition-duration: 0.4s;
+    text-align: left;
+  }
+  #entersubject:focus {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+  }
+button.subjectbtn {
+    width: 60%;
+    left: 20%;
+    border: none;
+    border-radius: 10px;
+    background-color:rgb(192, 253, 163);
+    padding: 10px 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    font-family: Arial;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+button.subjectbtn:hover {
+    background-color: white;
+}
