@@ -1,0 +1,65 @@
+body {
+  background-color: rgb(173, 218, 179);
+  font-family: Helvetica;
+  font-size: 25px;
+  text-align: center;
+}
+
+img.homepage-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 150px;
+}
+
+h1.text {
+  font-size: 80px;
+  text-align: center;
+  font-weight: bold;
+}
+
+div.key {
+    float: inline-start;
+}
+
+input.createCards {
+    padding: 16px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    width: 20%;
+    border: none;
+    border-bottom: 2px solid rgb(0, 163, 136);
+    border-radius: 5px;
+    background-color: rgb(173, 218, 179);
+    transition-duration: 0.3s;
+    text-align: left;
+  }
+  
+  input.createCards:focus {
+    background-color: rgb(200, 228, 203);
+    border: none;
+    border-bottom: black;
+  }
+
+
+
+
+button.cardButton {
+  width: 40%;
+  left: 30%;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(192, 253, 163);
+  padding: 20px 15px;
+  text-align: center;
+  display: inline-block;
+  font-size: 24px;
+  font-family: Arial;
+  margin: 5px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+button.cardButton:hover {
+  background-color: white;
+}
