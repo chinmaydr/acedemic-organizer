@@ -15,7 +15,9 @@ function cancelForm() {
 function submitForm() {
     document.getElementById("subjectPopup").style.display = "none";
 
-    let subject = document.getElementById("submitBtn").value;
-
-    
+    var set1 = document.createElement("div");
+        set1.setAttribute("id", "displayBack");
+        set1.textContent = document.getElementById("submitBtn").value;
+        const box = document.getElementById("body");
+        box.appendChild(set1);
   }
