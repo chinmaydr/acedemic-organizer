@@ -1,7 +1,5 @@
 //This SHOULD get the API data from the API
 
-
-
 // Allows user input for "back" to be shown onclick of "Flip Card" button that is created in create-card().
 function displayCard() {
     var doc = document.getElementById("body");
@@ -49,4 +47,20 @@ function displayCard() {
     var doc = document.getElementById("body");
     ncard = create_card();
     doc.appendChild(ncard);
+  }
+
+  function SaveCard(front,back){
+    let url = "https://tdt.nighthawkcodingteams.cf/api/card/create"+front+"_"+back;
+    fetch (url, {
+      method :'POST'
+    })
+  }
+
+  function LoadCard(front,back){
+    let url = "https://tdt.nighthawkcodingteams.cf/api/card/create"+front+"_"+back;
+    fetch (url, {
+      method :'GET'
+    })
+    .then(x=> ForEach(createcard)
+    )
   }
