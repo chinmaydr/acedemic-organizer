@@ -2,22 +2,6 @@
 
 function sendCards() {
 
-
-
-
-
-}
-
-POST /echo/post/json HTTP/1.1
-Host: tdt.nighthawkcodingteams.cf/api/card/
-Content-Type: application/json
-Content-Length: 80
-
-{
-  "Id": 12345,
-  "Customer": "John Smith",
-  "Quantity": 1,
-  "Price": 10.00
 }
 
 // Allows user input for "back" to be shown onclick of "Flip Card" button that is created in create-card().
