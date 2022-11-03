@@ -63,3 +63,20 @@ button.cardButton {
 button.cardButton:hover {
   background-color: white;
 }
+
+
+div.displayF {
+  position: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 40px;
+  width: 50%;
+  margin-left: 25%;
+  border: solid white;
+}
+
+div.displayB {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 40px;
+}

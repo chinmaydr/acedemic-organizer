@@ -62,5 +62,5 @@ function paste() {
   // API fetch and format
   fetch(url)
     .then((x) => x.text())
-    .then((y) => (document.getElementById("demo").innerHTML = y));
+    .then((y) => (document.getElementById("demo").innerHTML = y))
 }

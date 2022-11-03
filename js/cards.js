@@ -1,8 +1,6 @@
 //This SHOULD get the API data from the API
 
-function sendCards() {
 
-}
 
 // Allows user input for "back" to be shown onclick of "Flip Card" button that is created in create-card().
 function displayCard() {
@@ -10,6 +8,7 @@ function displayCard() {
 
     var dispB = document.createElement("div");
     dispB.setAttribute("id", "displayBack");
+    dispB.setAttribute("class", "displayB");
     dispB.textContent = document.getElementById("back").value;
     const boxB = document.getElementById("body");
     boxB.appendChild(dispB);
@@ -19,15 +18,25 @@ function displayCard() {
   function create_card() {
     const dispF = document.createElement("div");
     dispF.setAttribute("id", "displayFront");
+    dispF.setAttribute("class", "displayF");
     dispF.textContent = document.getElementById("front").value;
+
 
     const boxF = document.getElementById("body");
     boxF.appendChild(dispF);
 
+    linebr = document.createElement("br");
+    linebr2 = document.createElement("br");
+
     flipCard = document.createElement("button");
+
     flipCard.setAttribute("onclick", "displayCard()");
     flipCard.setAttribute("class", "cardButton");
     flipCard.innerHTML = "Flip Card";
+
+    dispF.appendChild(linebr);
+    dispF.appendChild(linebr2);
+
     dispF.appendChild(flipCard);
     return dispF;
   }
