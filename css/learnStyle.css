@@ -19,3 +19,86 @@ h1.text {
     font-weight: bold;
 }
 
+.open-button {
+    width: 30%;
+    left: 35%;
+    border: none;
+    border-radius: 10px;
+    background-color:rgb(166, 255, 125);
+    padding: 15px 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 35px;
+    font-family: Arial;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    margin-top: 35px;
+  }
+.open-button:hover {
+    background-color: white;
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    width: 40%;
+    left: 30%;
+    font-size: 20px;
+    background-color: rgb(188, 223, 193);
+    border-radius: 10px;
+    z-index: 9;
+  }
+
+.form-container input[type=text] {
+    width: 50%;
+    padding: 15px;
+    margin: 5px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  #search {
+    background-color: rgb(205, 223, 208);
+    border-radius: 5px;
+    border-bottom: solid 4px rgb(117, 221, 140);
+    margin-bottom: 15px;
+    transition-duration: 0.4s;
+  }
+  #search:focus {
+    background-color:rgb(221, 236, 223);
+    border: none;
+  }
+
+  .btn {
+    width: 30%;
+    left: 35%;
+    border: none;
+    border-radius: 10px;
+    background-color:rgb(166, 255, 125);
+    padding: 15px 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    font-family: Arial;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    margin-top: 10px;
+  }
+  .btn:hover {
+    background-color: white;
+  }
+  #cncl {
+    margin-bottom: 15px;
+  }
+
+
+
+
+
+  .wikiResult {
+    position: fixed;
+    top: 135px;
+    text-align: center;
+  }

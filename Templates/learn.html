@@ -10,5 +10,26 @@
   </head>
   <body>
 
+    <button class="open-button" onclick="openForm()">Click to search</button>
+    <div class="form-popup" id="myForm">
+      <form class="form-container">
+        <h1>What would you like to search for?</h1>
+
+        <input type="text" placeholder="Search Here" name="search" id="search" onenter="paste()" required />
+        <br>
+        <button type="button" class="btn" id="submit" onclick="paste()">Search</button>
+        <br>
+        <button type="button" class="btn" id="cncl" onclick="closeForm()">Cancel</button>
+        
+      </form>
+    </div>
+
+    <div class="wikiResult">
+      <p id="demo">Fetch a file to change this text.</p>
+    </div>
+
+    <script src="../js/fetchWiki.js">
+
+    </script>
   </body>
 </html>
