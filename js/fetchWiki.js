@@ -1,3 +1,5 @@
+
+
 function openForm() {
     document.getElementById("myForm").style.display = "block";
   }
@@ -21,7 +23,7 @@ function openForm() {
       document.getElementById("submit").click();
     }
   });
-  
+
 
 
   function format(){
