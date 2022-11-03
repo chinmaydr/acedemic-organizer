@@ -63,4 +63,6 @@ function paste() {
   fetch(url)
     .then((x) => x.text())
     .then((y) => (document.getElementById("demo").innerHTML = y))
+    .catch((z) => (document.getElementById("demo").innerHTML = "everything is broken"));
+  
 }
