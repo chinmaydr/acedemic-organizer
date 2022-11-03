@@ -48,19 +48,56 @@ function displayCard() {
     ncard = create_card();
     doc.appendChild(ncard);
   }
+  function format2(text){
+      const words = text.split(" ");
+      let new_string = "";
+      for (let i = 0; i < words.length; i++) {
+        new_string += words[i];
+        if (words.length <= 1) {
+          // breaks if only one word
+          break;
+        }
+        new_string += "-";
+      }
+      return new_string; // returns the new string
+  }
+  function unparse(text){
+    const words = text.split("-");
+      let new_string = "";
+      for (let i = 0; i < words.length; i++) {
+        new_string += words[i];
+        if (words.length <= 1) {
+          // breaks if only one word
+          break;
+        }
+        new_string += " ";
+      }
+      return new_string; // returns the new string
+  }
 
-  function SaveCard(front,back){
-    let url = "https://tdt.nighthawkcodingteams.cf/api/card/create"+front+"_"+back;
+
+  
+  function SaveCard() {
+    let inputFront = format2(document.getElementById("front").value);
+    let inputBack = format2(document.getElementById("back").value);
+
+    let url = "https://tdt.nighthawkcodingteams.cf/api/card/create/"+inputFront+"_"+inputBack;
     fetch (url, {
       method :'POST'
     })
+
   }
 
   function LoadCard(front,back){
-    let url = "https://tdt.nighthawkcodingteams.cf/api/card/create"+front+"_"+back;
+    let url = "https://tdt.nighthawkcodingteams.cf/api/card/create/"+front+"_"+back;
     fetch (url, {
       method :'GET'
     })
-    .then(x=> ForEach(createcard)
+    .then(x=> ForEach(createcard())
     )
+  }
+
+  function createcard() {
+
+
   }
