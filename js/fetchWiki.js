@@ -41,8 +41,11 @@ function format() {
 function formatText(stuff) {
   let formatted = format(); // uses format procedure to MANAGE COMPLEXITY
   let url = "https://tdt.nighthawkcodingteams.cf/api/wiki/" + formatted;
-  import(requests);
-
+  fetch(url)
+    .then() // how promises work is that you have a success and a rejection `then`. 
+    // One of these runs if it works the other runs if it does not. Please read more
+    // into this this is rather bare bones.
+    .then()
   for (var key in stuff.jsonData) { //bro can u figure this out i need to study for a test ill come back if i can, i need to go sorry
     return key;
  }
