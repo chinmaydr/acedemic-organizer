@@ -121,11 +121,11 @@ h1.text {
 
   .wikiResult {
     position: fixed;
-    top: 30%;
+    top: 40%;
     text-align: center;
     padding-left: 30px;
     padding-right: 30px;
     overflow: scroll;
-    height: 72.5%;
+    height: 62.5%;
   }
 
