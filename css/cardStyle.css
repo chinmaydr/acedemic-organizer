@@ -65,6 +65,26 @@ button.cardButton:hover {
 }
 
 
+button.cardButton2 {
+  width: 20%;
+  left: 40%;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(192, 253, 163);
+  padding: 15px 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 18px;
+  font-family: Arial;
+  margin: 5px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+button.cardButton2:hover {
+  background-color: rgb(233, 245, 227);
+}
+
+
 div.displayF {
   position: auto;
   margin-top: 30px;
