@@ -93,22 +93,26 @@ function displayCard() {
 
   }
   
-  function return_item(json){
-    let card_ids = object.keys(json);
-    for (var id in card_ids){
-      let titlesub = object.keys(id);
-      return (titlesub);
+  
+// Copied code from https://www.sitepoint.com/loop-through-json-response-javascript/#:~:text=(async%20()%20%3D%3E%20%7B%0A%20%20async,)()%3B%0A%0A//%20Array(30)%20%5B%20%7B%E2%80%A6%7D%2C%20%7B%E2%80%A6%7D%2C%20%7B%E2%80%A6%7D%2C%20%7B%E2%80%A6%7D%2C%20%7B%E2%80%A6%7D%2C%20%7B%E2%80%A6%7D%2C%20%7B%E2%80%A6%7D%2C%20%7B%E2%80%A6%7D%2C%20%7B%E2%80%A6%7D%2C%20%7B%E2%80%A6%7D%2C%20%E2%80%A6%20%5D
+function importCard(){
+  (async () => {
+    async function getCards() {
+      const url = `https://tdt.nighthawkcodingteams.cf/api/card`;
+  
+      const response = await fetch(url);
+      const lol = await response.json();
+  
+      return lol;
     }
-  }
+  
+    const cards = await getCards();
+    console.log(cards);
+    
+  })();
+}
 
-  function importCard(){
-    let url = "https://tdt.nighthawkcodingteams.cf/api/card/";
-    fetch (url, {
-      method :'GET'
-    })
-    .then(x => x.json())
-    .then(y => return_item())
-  }
+
 
   function createCard(front,back) {;
     let newCard = document.createElement("div");
