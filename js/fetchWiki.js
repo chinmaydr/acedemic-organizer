@@ -50,6 +50,37 @@ function formatText(stuff) {
     return key;
  }
 }
+function removeExcess(text){
+  for(var i = 0; i < text.length; i++){
+      text = text.replace('"', '');
+      text = text.replace('"', '');
+      text = text.replace( "\\n", '<br><br>')
+      text = text.replace( "\\", '');
+  }
+  return  String(text);
+  
+}
+function something(y){
+  let dic_keys = Object.keys(y)
+  let bod = document.getElementById("e"); // get body to append, performance
+  //var sum = JSON.stringify(dic_keys['"summary"']);
+  //var sumtext = JSON.stringify(y['"summary"']);
+  //new_h1.innerHTML = removeExcess(sum);
+  //new_div.innerHTML = removeExcess(sumtext);
+  for (var key in dic_keys){
+      var nkey = JSON.stringify(dic_keys[key]);
+      var ntext = JSON.stringify(y[dic_keys[key]]); // assign key and text to variable
+      if (ntext === '""') {
+        continue;
+      }
+      new_div = document.createElement('div');
+      new_h1 = document.createElement('h1');
+      new_h1.innerHTML = removeExcess(nkey);
+      new_div.innerHTML = removeExcess(ntext);
+      bod.appendChild(new_h1);
+      bod.appendChild(new_div);
+  }
+}
 
 // Written by Varalu & Azeem
 // Fetches from Wiki API and pretty prints
@@ -61,6 +92,7 @@ function paste() {
 
   // API fetch and format
   fetch(url)
-    .then((x) => x.text())
-    .then((y) => (document.getElementById("demo").innerHTML = y));
+    .then((x) => x.json())
+    .then(y => something(y))
+    .catch(y => document.getElementById("demo").innerHTML = "Error");
 }
