@@ -61,7 +61,7 @@ button.cardButton {
   transition-duration: 0.4s;
 }
 button.cardButton:hover {
-  background-color: white;
+  background-color: rgb(233, 245, 227);
 }
 
 
@@ -73,11 +73,24 @@ div.displayF {
   width: 50%;
   margin-left: 25%;
   border: solid white;
+  background-color: white;
+  border-radius: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 div.displayB {
   margin-top: 30px;
   margin-bottom: 30px;
   font-size: 40px;
+  background-color: rgb(223, 223, 223);
+  position: auto;
+  font-size: 40px;
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 40px;
+  border-radius: 15px;
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 
