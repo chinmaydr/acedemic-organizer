@@ -94,40 +94,77 @@ function displayCard() {
   }
   
   
-// Copied code from https://www.sitepoint.com/loop-through-json-response-javascript/#:~:text=(async%20()%20%3D%3E%20%7B%0A%20%20async,)()%3B%0A%0A//%20Array(30)%20%5B%20%7B%E2%80%A6%7D%2C%20%7B%E2%80%A6%7D%2C%20%7B%E2%80%A6%7D%2C%20%7B%E2%80%A6%7D%2C%20%7B%E2%80%A6%7D%2C%20%7B%E2%80%A6%7D%2C%20%7B%E2%80%A6%7D%2C%20%7B%E2%80%A6%7D%2C%20%7B%E2%80%A6%7D%2C%20%7B%E2%80%A6%7D%2C%20%E2%80%A6%20%5D
-function importCard(){
-  (async () => {
+// Copied code from https://www.sitepoint.com/loop-through-json-response-javascript/
+//function importCard(){
+  //(async () => {
     async function getCards() {
       const url = `https://tdt.nighthawkcodingteams.cf/api/card`;
   
       const response = await fetch(url);
       const lol = await response.json();
-  
+      /*
+      console.log("lol "+lol);
+      console.log("type lol "+ typeof(lol));
+      console.log("response "+ response);
+      console.log("type response" + typeof(response));
+      */
       return lol;
     }
-  
+
+ /*   
     const cards = await getCards();
     console.log(cards);
     
   })();
+ */ 
+//}
+
+
+async function initCards(){
+  array_of_dic = await getCards();
+  let keys = Object.keys(array_of_dic);
+  for (var key in keys){
+    front = unparse(array_of_dic[key]["title"]);
+    back = unparse(array_of_dic[key]["substance"]);
+    createCard(front, back);
+  }
 }
 
 
 
-  function createCard(front,back) {;
+
+
+
+
+function showBack(i) {
+  let backContainer = document.createElement("div");
+  backContainer.setAttribute("id", "displayBack");
+  backContainer.setAttribute("class", "cardBack");
+  backContainer.textContent = i;
+  const boxB = document.getElementById("body");
+  boxB.appendChild(backContainer);
+
+}
+function createCard(front,back) {;
     let newCard = document.createElement("div");
     newCard.setAttribute("class", "cardFront");
     newCard.textContent = front;
     const displayFront = document.getElementById("body");
     displayFront.appendChild(newCard);
 
-    let flipCardContainer = document.createElement("div");
-    flipCardContainer.setAttribute("class", "flipCardContainer");
-    let flipCard = flipCardContainer.createElement("button");
+    linebr = document.createElement("br");
+    linebr2 = document.createElement("br");
+    linebr3 = document.createElement("br");
+
+
+    newCard.appendChild(linebr);
+    newCard.appendChild(linebr2);
+    newCard.appendChild(linebr3);
+
+    let flipCard = document.createElement("button");
+    newCard.appendChild(flipCard);
+    flipCard.setAttribute("id", "cardtoFlip");
     flipCard.setAttribute("class", "btn");
     flipCard.innerHTML = "Flip Card";
-    const displayFlip = document.getElementById("body");
-    displayFlip.appendChild(flipCardContainer);
-
-
+    flipCard.setAttribute("onclick", "showBack(back)")
   }
