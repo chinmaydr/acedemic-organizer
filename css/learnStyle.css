@@ -121,6 +121,10 @@ h1.text {
 
   .wikiResult {
     position: fixed;
+<<<<<<< HEAD
     top: 37%;
+=======
+    top: 36%;
+>>>>>>> d75f7dbd80ae2c32498e4200f8c7abb5f377cd32
     text-align: center;
   }

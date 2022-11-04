@@ -70,7 +70,7 @@ function something(y){
   for (var key in dic_keys){
       var nkey = JSON.stringify(dic_keys[key]);
       var ntext = JSON.stringify(y[dic_keys[key]]); // assign key and text to variable
-      if (ntext === '""') {
+      if (ntext === '""' || nkey === '"External links"' || nkey === '"summary"' || nkey === '"url"') {
         continue;
       }
       new_div = document.createElement('div');
@@ -81,7 +81,6 @@ function something(y){
       bod.appendChild(new_div);
   }
 }
-
 // Written by Varalu & Azeem
 // Fetches from Wiki API and pretty prints
 function paste() {
@@ -93,6 +92,6 @@ function paste() {
   // API fetch and format
   fetch(url)
     .then((x) => x.json())
-    .then(y => something(y))
-    .catch(y => document.getElementById("demo").innerHTML = "Error");
+    .then((y) => something(y))
+    .catch(y => document.getElementById("demo").innerHTML = "ahhhh");
 }
