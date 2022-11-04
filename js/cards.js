@@ -9,7 +9,7 @@ function displayCard() {
     dispB.setAttribute("class", "displayB");
     dispB.textContent = document.getElementById("back").value;
     const boxB = document.getElementById("body");
-    boxB.appendChild(dispB);
+    boxB.appendChild(dispB);    
   }
 
   // Allows user input for "front" to be shown and adds a button to "flip the card".
@@ -48,6 +48,10 @@ function displayCard() {
     ncard = create_card();
     doc.appendChild(ncard);
   }
+
+
+
+
   function format2(text){
       const words = text.split(" ");
       let new_string = "";
@@ -77,7 +81,8 @@ function displayCard() {
 
 
   
-  function SaveCard() {
+
+  function saveCard() {
     let inputFront = format2(document.getElementById("front").value);
     let inputBack = format2(document.getElementById("back").value);
 
@@ -87,17 +92,39 @@ function displayCard() {
     })
 
   }
+  
+  function return_item(json){
+    let card_ids = object.keys(json);
+    for (var id in card_ids){
+      let titlesub = object.keys(id);
+      return (titlesub)
+    }
+  }
 
-  function LoadCard(front,back){
-    let url = "https://tdt.nighthawkcodingteams.cf/api/card/create/"+front+"_"+back;
+  function importCard(){
+    let url = "https://tdt.nighthawkcodingteams.cf/api/card/";
     fetch (url, {
       method :'GET'
     })
-    .then(x=> ForEach(createcard())
-    )
+    .then(x=> x.json())
+    .then(y => return_item())
+    return (titlesub)
   }
 
-  function createcard() {
+  function createCard(front,back) {;
+    let newCard = document.createElement("div");
+    newCard.setAttribute("class", "cardFront");
+    newCard.textContent = front;
+    const displayFront = document.getElementById("body");
+    displayFront.appendChild(newCard);
+
+    let flipCardContainer = document.createElement("div");
+    flipCardContainer.setAttribute("class", "flipCardContainer");
+    let flipCard = flipCardContainer.createElement("button");
+    flipCard.setAttribute("class", "btn");
+    flipCard.setAttribute("innerHtml", "Flip Card");
+    const displayFlip = document.getElementById("body");
+    displayFlip.appendChild(flipCardContainer);
 
 
   }
